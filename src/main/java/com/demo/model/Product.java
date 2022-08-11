@@ -21,8 +21,7 @@ public class Product {
     @Column(name = "price")
     private int price;
 
-    public Product(int id, String name, int count, int price) {
-        this.id = id;
+    public Product(String name, int count, int price) {;
         this.name = name;
         this.count = count;
         this.price = price;

@@ -2,7 +2,6 @@ package com.demo.controller;
 
 import com.demo.model.Product;
 import com.demo.repository.ProductElasticRepo;
-import com.demo.service.ProductSearchService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,7 +12,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/api/search")
+@RequestMapping("/store/search")
 public class SearchController {
 
     private final ProductElasticRepo elasticRepo;

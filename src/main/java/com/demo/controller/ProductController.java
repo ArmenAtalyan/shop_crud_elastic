@@ -3,11 +3,12 @@ package com.demo.controller;
 import com.demo.model.Product;
 import com.demo.service.ProductJpaService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
+@Controller
 @RequestMapping("/store")
 public class ProductController {
 
@@ -27,24 +28,24 @@ public class ProductController {
     public Product findProduct(@PathVariable int id){
         Product product = productJpaService.findByID(id);
         if (product == null){
-            throw new RuntimeException("Employee with id " + id + " not found");
+            throw new RuntimeException("Employee with id " + id + " not found.");
         }
         return productJpaService.findByID(id);
     }
 
-    @PostMapping("/products")
+    @PostMapping("/products/add")
     public Product saveProduct(@RequestBody Product product){
         productJpaService.save(product);
         return product;
     }
 
-    @PutMapping("/products")
+    @PutMapping("/products/update")
     public Product updateProduct(@RequestBody Product product){
         productJpaService.save(product);
         return product;
     }
 
-    @DeleteMapping("/products/{id}")
+    @DeleteMapping("/products/delete/{id}")
     public String deleteProduct(@PathVariable int id){
         Product product = productJpaService.findByID(id);
         if (product == null){

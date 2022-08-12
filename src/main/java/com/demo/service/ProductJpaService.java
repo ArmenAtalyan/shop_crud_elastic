@@ -23,13 +23,7 @@ public class ProductJpaService {
 
     public Product findByID(int id){
         Optional<Product> result = productJpaRepo.findById(id);
-        Product product = null;
-        if(result.isPresent()){
-            product = result.get();
-        }else {
-            throw new RuntimeException("Didn't find product with id: " + id);
-        }
-        return product;
+        return result.get();
     }
 
     public void save(Product product){

@@ -7,7 +7,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "products")
-@Document(indexName = "product")
+@Document(indexName = "products")
 public class Product {
 
     @Id

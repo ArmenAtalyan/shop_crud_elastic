@@ -9,7 +9,6 @@ import org.springframework.data.elasticsearch.client.erhlc.RestClients;
 import org.springframework.data.elasticsearch.repository.config.EnableElasticsearchRepositories;
 
 
-
 @Configuration
 @EnableElasticsearchRepositories(basePackages = "com.demo.repository")
 public class ElasticConfig extends AbstractElasticsearchConfiguration {

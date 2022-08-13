@@ -13,7 +13,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/store/search")
+@RequestMapping("/store")
 public class SearchController {
 
     private final ProductElasticService elasticService;
@@ -23,7 +23,7 @@ public class SearchController {
         this.elasticService = elasticService;
     }
 
-    @GetMapping(value = "/{text}")
+    @GetMapping( "search/{text}")
     public List<Product> getAllResults(@PathVariable String text) {
         return elasticService.findAllResults(text);
     }

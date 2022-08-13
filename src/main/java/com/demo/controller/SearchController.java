@@ -1,7 +1,6 @@
 package com.demo.controller;
 
 import com.demo.model.Product;
-import com.demo.repository.ProductElasticRepo;
 import com.demo.service.ProductElasticService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

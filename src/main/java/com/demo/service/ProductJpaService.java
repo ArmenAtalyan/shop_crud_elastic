@@ -1,7 +1,7 @@
 package com.demo.service;
 
 import com.demo.model.Product;
-import com.demo.repository.ProductJpaRepo;
+import com.demo.repositoryJPA.ProductJpaRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

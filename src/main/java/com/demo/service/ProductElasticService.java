@@ -1,7 +1,7 @@
 package com.demo.service;
 
 import com.demo.model.Product;
-import com.demo.repository.ProductElasticRepo;
+import com.demo.repositoryElastic.ProductElasticRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

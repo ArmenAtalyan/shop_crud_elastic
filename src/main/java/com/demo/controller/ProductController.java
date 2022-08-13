@@ -39,13 +39,13 @@ public class ProductController {
         return product;
     }
 
-    @PutMapping("/products/update")
+    @PostMapping("/products/update")
     public Product updateProduct(@RequestBody Product product){
         productJpaService.save(product);
         return product;
     }
 
-    @DeleteMapping("/products/delete/{id}")
+    @PostMapping("/products/delete/{id}")
     public String deleteProduct(@PathVariable int id){
         Product product = productJpaService.findByID(id);
         if (product == null){
